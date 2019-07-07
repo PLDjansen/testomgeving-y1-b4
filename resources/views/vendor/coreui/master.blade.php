@@ -12,6 +12,14 @@
     <!-- Custom CSS -->
     @stack('css')
 
+    <script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+    <script src="https://dexels.github.io/navajofeeds-json-parser/js/dist/feed-0.0.1.js"></script>
+    <script>
+        feed.init({
+            clientId: "K7630LqHZt"
+        });
+    </script>
+
     <title>@yield('title', config('coreui.title', __('coreui::coreui.default_title')))</title>
 </head>
 <body class="app header-fixed sidebar-fixed sidebar-lg-show">
@@ -56,14 +64,21 @@
         <nav class="sidebar-nav">
             <ul class="nav">
                 @each('coreui::menu-item', $coreUI->menu(), 'item')
+                @yield('sidebar')
             </ul>
         </nav>
         <button class="sidebar-minimizer brand-minimizer" type="button"></button>
     </div>
     <main class="main">
-        <div aria-label="breadcrumb">
-            @yield('breadcrumb', config('coreui.title', __('coreui::coreui.default_title')))
-        </div>
+
+        <nav aria-label="breadcrumb" role="navigation">
+            <ol class="breadcrumb">
+                <a class="breadcrumb-item" href="{{URL::to("/")}}"><li>Home</li></a>
+                <li class="breadcrumb-item">@yield('breadcrumb')</li>
+
+            </ol>
+        </nav>
+
         <div class="container-fluid">
             @yield('body')
         </div>

@@ -11,24 +11,68 @@ return [
      * Text to put in the top-left of the menu bar. logo_mini is shown when the navbar is collapsed.
      * NOTE: This is a non-escaped string, so you can put HTML in here
      */
-    'logo' => 'Core<strong>UI</strong>',
-    'logo_mini' => 'C',
+    'logo' => 'Forti<strong>STATS</strong>',
+    'logo_mini' => 'FS',
 
     /*
      * Menu builder
      */
     'menu' => [
-//        [
-//            'text' => 'Dashboard',          // The text to be displayed inside the menu.
-//            'url' => 'admin/dashboard',     // The URL behind the text. Mutually exclusive with "route" option.
-//            'icon' => 'chart-bar far',      // Name of FontAwesome icon to display. Note that you have to use the "far", "fas" or "fal" modifier behind the icon.
-//            'target' => '_blank'            // Target attribute of <a> tag.
-//        ],
+        [
+            'text' => 'Homepagina',          // The text to be displayed inside the menu.
+
+            'url' => '/',                 // The URL behind the text. Mutually exclusive with "route" option.
+            'icon' => 'home',           // Name of FontAwesome icon to display.
+            'target' => '',            // Target attribute of <a> tag.
+
+        ],
+        [
+            'text' => 'Wedstrijden',
+            'url' => 'matches',
+            'icon' => 'futbol',
+            'target' => '',
+        ],
+        [
+
+            'text' => 'Seizoenen',
+            'url' => 'seasons',
+            'icon' => 'futbol',
+            'target' => '',
+        ],
+        [
+
+            'text' => 'Spelersselectie',
+            'url' => 'players',
+            'icon' => 'users',
+            'target' => '',
+        ],
+        [
+
+            'text' => 'Help',
+//            'url' => 'admin/dashboard',
+            'url' => '/',
+            'icon' => 'question',
+//            'target' => '_blank',
+            'target' => '',
+        ],
+        [
+            'text' => 'Gebruiker',
+            'url' => 'users',
+            'icon' => 'users',
+            'target' => '',
+        ],
+        [
+            'text' => 'Uitloggen',
+//            'url' => 'login',
+            'url' => '/',
+            'icon' => 'sign-out-alt',
+            'target' => '',
+        ],
 //        'First section',                    // Section header
 //        [
 //            'text' => 'Users',
-//            'route' => 'admin.users',       // The route behind the text. Mutually exclusive with "url" option.
-//            'icon' => 'users fas'
+//            'route' => '/',       // The route behind the text. Mutually exclusive with "url" option.
+//            'icon' => 'users'
 //        ],
 //        'Admin only',
 //        [

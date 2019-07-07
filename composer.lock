@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "a89d75be0e3ed6f78edb1123705f44c1",
+    "content-hash": "4be31580e9cf5cad32f5adb83af00dfa",
     "packages": [
         {
             "name": "dnoegel/php-xdg-base-dir",
@@ -373,16 +373,16 @@
         },
         {
             "name": "hz-hbo-ict/laravel-core-ui",
-            "version": "v2.3.2",
+            "version": "v2.9.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/HZ-HBO-ICT/Laravel-CoreUI.git",
-                "reference": "22dee53f650c712cc8b78bfadf55ee4c0e30cbe4"
+                "reference": "17683f1d3395e2828b555a6047b9baf59f584b5d"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/HZ-HBO-ICT/Laravel-CoreUI/zipball/22dee53f650c712cc8b78bfadf55ee4c0e30cbe4",
-                "reference": "22dee53f650c712cc8b78bfadf55ee4c0e30cbe4",
+                "url": "https://api.github.com/repos/HZ-HBO-ICT/Laravel-CoreUI/zipball/17683f1d3395e2828b555a6047b9baf59f584b5d",
+                "reference": "17683f1d3395e2828b555a6047b9baf59f584b5d",
                 "shasum": ""
             },
             "require": {
@@ -425,7 +425,7 @@
                 }
             ],
             "description": "Easy to use package with authentication scaffold that provides an easy implementation of CoreUI within Laravel",
-            "time": "2019-04-15T11:45:40+00:00"
+            "time": "2019-07-03T13:32:27+00:00"
         },
         {
             "name": "jakub-onderka/php-console-color",

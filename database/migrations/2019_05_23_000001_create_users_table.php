@@ -7,7 +7,14 @@ use Illuminate\Database\Migrations\Migration;
 class CreateUsersTable extends Migration
 {
     /**
+     * Schema table name to migrate
+     * @var string
+     */
+    public $tableName = 'users';
+
+    /**
      * Run the migrations.
+     * @table users
      *
      * @return void
      */
@@ -21,6 +28,7 @@ class CreateUsersTable extends Migration
             $table->string('password');
             $table->rememberToken();
             $table->timestamps();
+
         });
     }
 
@@ -29,8 +37,8 @@ class CreateUsersTable extends Migration
      *
      * @return void
      */
-    public function down()
-    {
-        Schema::dropIfExists('users');
-    }
+     public function down()
+     {
+       Schema::dropIfExists($this->tableName);
+     }
 }

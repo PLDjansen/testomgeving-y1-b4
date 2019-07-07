@@ -3,6 +3,7 @@
 namespace App\Exceptions;
 
 use Exception;
+use Symfony\Component\Debug\Exception\FlattenException;
 use Illuminate\Foundation\Exceptions\Handler as ExceptionHandler;
 
 class Handler extends ExceptionHandler
@@ -37,6 +38,10 @@ class Handler extends ExceptionHandler
         parent::report($exception);
     }
 
+
+
+    // stap 1 van de tutorial: voeg deze public function toe aan de handler
+
     /**
      * Render an exception into an HTTP response.
      *
@@ -44,8 +49,20 @@ class Handler extends ExceptionHandler
      * @param  \Exception  $exception
      * @return \Illuminate\Http\Response
      */
-    public function render($request, Exception $exception)
+    public function render($request, Exception $e)
     {
-        return parent::render($request, $exception);
+
+        $exception = FlattenException::create($e);
+        $statusCode = $exception->getStatusCode($exception);
+
+        if ($statusCode === 404 or $statusCode === 500 and app()->environment() == 'production') {
+            return response()->view('errors.' . $statusCode, [], $statusCode);
+        }
     }
+
+
+
+
+
+
 }

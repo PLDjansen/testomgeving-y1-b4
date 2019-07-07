@@ -11,4 +11,9 @@ class PagesController extends Controller
         return view('index');
     }
 
+    //season function
+    public function seasons (){
+        return view('seasons');
+    }
+
 }

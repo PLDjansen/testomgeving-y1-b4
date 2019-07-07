@@ -39,4 +39,11 @@ class Kernel extends ConsoleKernel
 
         require base_path('routes/console.php');
     }
+    protected $middlewareGroups = [
+        'web' => [
+        \Illuminate\Cookie\Middleware\EncryptCookies::class,
+        // appending custom middleware
+        \MyApp\Http\Middleware\HttpsProtocol::class
+    ],
+    ];
 }

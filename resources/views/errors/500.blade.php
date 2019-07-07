@@ -10,18 +10,18 @@
         </div>
 
         <!-- Tekst en uitleg -->
-        <div class="col-6">
+        <div class="col-10">
             <h1 style="font-size:20px;" class="text-black-50" >
-                Sorry, dit werkt niet goed. Een aapje met een toetsenbord heeft een foutje gemaakt!
+                Sorry, dit werkt niet goed. Een aapje met een toetsenbord heeft een foutje gemaakt! (Error code: 500)
             </h1>
         </div>
 
         <!-- Oplossingen -->
         <div class="col-10">
-            <h1 style="font-size:16px;" class="text-black-10" >
+            <h1 style="font-size:16px;" class="text-black-50" >
                 Om dit op te lossen kun je:
             </h1>
-            <h1 style="font-size:14px;" class="text-black-20" >
+            <h1 style="font-size:14px;" class="text-black-50" >
                 Kun je de pagina verversen (soms helpt dit)
                 <br>
                 Opnieuw proberen over een paar minuten
@@ -31,7 +31,9 @@
         </div>
 
         <div class="col-10" style="margin-top: 10px">
-            <p>Om terug te gaan naar de homepagina, klik <a href="{{ url("/") }}">hier</a></p>
+            <h1 style="font-size:16px;" class="text-black-50" >
+                Om terug te gaan naar de homepagina, klik <a href="{{ url("/") }}">hier</a>
+            </h1>
         </div>
 
     </div>

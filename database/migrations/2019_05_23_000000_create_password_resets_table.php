@@ -7,7 +7,14 @@ use Illuminate\Database\Migrations\Migration;
 class CreatePasswordResetsTable extends Migration
 {
     /**
+     * Schema table name to migrate
+     * @var string
+     */
+    public $tableName = 'password_resets';
+
+    /**
      * Run the migrations.
+     * @table password_resets
      *
      * @return void
      */
@@ -25,8 +32,8 @@ class CreatePasswordResetsTable extends Migration
      *
      * @return void
      */
-    public function down()
-    {
-        Schema::dropIfExists('password_resets');
-    }
+     public function down()
+     {
+       Schema::dropIfExists($this->tableName);
+     }
 }
